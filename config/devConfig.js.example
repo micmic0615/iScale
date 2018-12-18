@@ -1,0 +1,5 @@
+
+module.exports = {
+    urlDev: 'https://192.168.13.14',
+    urlProd: 'https://192.168.13.14'
+};

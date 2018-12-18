@@ -1,16 +1,27 @@
 "use strict";
 import * as React from 'react';
-import { Layout, Menu, Breadcrumb, Icon, Card } from 'antd';
+
+import Layout from 'antd/lib/layout';
+import 'antd/lib/layout/style/css';
+
+import Menu from 'antd/lib/menu';
+import 'antd/lib/menu/style/css';
+
+import Breadcrumb from 'antd/lib/breadcrumb';
+import 'antd/lib/breadcrumb/style/css';
+
+import Icon from 'antd/lib/icon';
+import 'antd/lib/icon/style/css';
+
 import { PAGE_REPORTS, PAGE_OPTION_2, PAGE_USER, PAGE_TEAM, PAGE_FILE } from '../../constants/pageNames';
 import PageReports from './PageReports';
 import PageDefault from './PageDefault';
-import { startCase } from 'lodash';
+import startCase from 'lodash/startcase';
 
 
 const { Header, Content, Footer, Sider } = Layout;
 const SubMenu = Menu.SubMenu;
 
-require('antd/dist/antd.less');
 export default class DashboardApp extends React.Component {
   state = {
     collapsed: false,

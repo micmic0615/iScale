@@ -1,6 +1,9 @@
 "use strict";
 import * as React from 'react';
-import { Card } from 'antd';
+
+import Card from 'antd/lib/card';
+import 'antd/lib/card/style/css';
+
 interface Props {
     currentPage: string;
 }
