@@ -9,6 +9,7 @@ const _ = require('underscore');
 const ReportsApiRouter = require('./source/routers/ReportsApiRouter');
 
 const IS_PROD = "NODE_ENV" in process.env && "production" === process.env.NODE_ENV;
+console.log(IS_PROD)
 const config = { isProd:IS_PROD };
 
 const app = express();
