@@ -1,7 +1,17 @@
 "use strict";
 import * as React from 'react';
 import { Fragment } from 'react';
-import { Card, DatePicker, Switch } from 'antd';
+
+import Card from 'antd/lib/card';
+import 'antd/lib/card/style/css';
+
+import DatePicker from 'antd/lib/date-picker';
+import 'antd/lib/date-picker/style/css';
+
+import Switch from 'antd/lib/switch';
+import 'antd/lib/switch/style/css';
+
+
 import moment from 'moment';
 import axios from 'axios';
 import { Chart } from "react-charts";

@@ -10,13 +10,14 @@
     "test": "cd public && ../node_modules/webpack/bin/webpack.js --progress --colors --watch",
     "build": "./node_modules/webpack/bin/webpack.js --progress",
     "postinstall": "npm run build",
-    "start": "node app.js"
+    "start": "node app.js --uglify"
   },
   "dependencies": {
     "antd": "~3.9.3",
     "axios": "^0.18.0",
     "body-parser": "~1.18.3",
     "chart.js": "^1.1.1",
+    "compression-webpack-plugin": "^2.0.0",
     "express": "4.16.3",
     "express-session": "~1.15.6",
     "lodash": "^4.17.11",
