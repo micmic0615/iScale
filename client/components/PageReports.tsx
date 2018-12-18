@@ -134,7 +134,6 @@ export default class PageContent extends React.Component {
                         tooltip
 
                         getSeriesStyle={(series)=>{
-                            console.log(series)
                             return {
                                 color: series.originalSeries.color,
                                 opacity: series.originalSeries.opacity
