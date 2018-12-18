@@ -65,8 +65,8 @@ module.exports = {
     },
     module: { rules : moduleRules },
     optimization : {
-      // minimize : IS_PROD,
-      minimize: true,
+      minimize : IS_PROD,
+      // minimize: true,
       splitChunks : {
         cacheGroups : {
           vendor : {
@@ -78,16 +78,16 @@ module.exports = {
         }
       }
     },
-    // devtool: IS_PROD ? undefined : 'source-map',
-    devtool: 'source-map',
-    // plugins : IS_PROD ? [
-    //   new webpack.DefinePlugin({'process.env.NODE_ENV': JSON.stringify('production')}),
-    //   new CompressionPlugin()
-    // ] : [ ],
-     plugins : [
+    devtool: IS_PROD ? undefined : 'source-map',
+    // devtool: 'source-map',
+    plugins : IS_PROD ? [
       new webpack.DefinePlugin({'process.env.NODE_ENV': JSON.stringify('production')}),
       new CompressionPlugin()
-    ],
+    ] : [ ],
+    //  plugins : [
+    //   new webpack.DefinePlugin({'process.env.NODE_ENV': JSON.stringify('production')}),
+    //   new CompressionPlugin()
+    // ],
     resolve: {
       extensions: ['.ts', '.tsx', '.js', '.json']
     }
