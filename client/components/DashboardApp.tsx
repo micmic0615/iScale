@@ -16,7 +16,7 @@ import 'antd/lib/icon/style/css';
 import { PAGE_REPORTS, PAGE_OPTION_2, PAGE_USER, PAGE_TEAM, PAGE_FILE } from '../../constants/pageNames';
 import PageReports from './PageReports';
 import PageDefault from './PageDefault';
-import startCase from 'lodash/startcase';
+import startCase from 'lodash/startCase';
 
 
 const { Header, Content, Footer, Sider } = Layout;
