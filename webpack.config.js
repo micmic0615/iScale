@@ -4,6 +4,7 @@ const webpack = require('webpack');
 const _ = require('underscore');
 
 const IS_PROD = "NODE_ENV" in process.env && ("production" === process.env.NODE_ENV || "staging" === process.env.NODE_ENV);
+console.log(IS_PROD, "run")
 // const IS_PROD = true;
 
 const moduleRules = [

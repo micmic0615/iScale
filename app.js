@@ -4,6 +4,7 @@ const express = require('express');
 const serveStatic = require('serve-static');
 const path = require('path');
 const nunjucks = require('nunjucks');
+const compression = require('compression');
 const _ = require('underscore');
 
 const ReportsApiRouter = require('./source/routers/ReportsApiRouter');
@@ -13,8 +14,8 @@ console.log(IS_PROD)
 const config = { isProd:IS_PROD };
 
 const app = express();
-app.set('port', (process.env.PORT || 5000));
-
+app.set('port', (process.env.PORT || 5500));
+app.use(compression())
 if (!config.isProd) {
   // setup the webpack server
   const webpack = require('webpack');
@@ -45,10 +46,13 @@ nunjucks.configure(__dirname + '/templates', {
 }).express(app);
 
 app.use(new ReportsApiRouter(config));
+
+
 app.get('/', function(req, res) {
   const models = {
     ...config
   };
+
   res.render('index.html', models);
 });
 
