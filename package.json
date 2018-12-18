@@ -10,7 +10,7 @@
     "test": "cd public && ../node_modules/webpack/bin/webpack.js --progress --colors --watch",
     "build": "./node_modules/webpack/bin/webpack.js --progress",
     "postinstall": "npm run build",
-    "start": " NODE_ENV=production&&node app.js",
+    "start": "NODE_ENV=production node app.js",
     "exec": "set NODE_ENV=production&& node app.js"
   },
   "dependencies": {
